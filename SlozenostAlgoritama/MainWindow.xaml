@@ -1,0 +1,33 @@
+﻿<Window x:Class="SlozenostAlgoritama.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Strukture Podataka - Složenost algoritama" Height="672" Width="1119" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Ribbon x:Name="RibbonWin"  SelectedIndex="0" Background="#FFD1EEDF">
+            <!-- Application Menu, located at the left-hand side (down arrow) -->
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu   KeyTip="F">
+                    <RibbonApplicationMenuItem Header="Složenosti" Click="poc" />
+                    <RibbonApplicationMenuItem Header="Exit"  />
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+            <!-- Ribbon Tab #1: Home -->
+            <RibbonTab Header="Algoritmi" KeyTip="A" >
+                <!-- Home  group-->
+                <RibbonGroup x:Name="ClipboardGroup" Header="Start/stop algoritma">
+                    <RibbonButton  Label="Fibonaccijev niz
+" KeyTip="C" Click="Izracunaj" />
+                    <RibbonButton  Label="Izračun fakorijela" KeyTip="FP" Click="fakt" />
+                </RibbonGroup>
+                <!-- Employee And Payroll group-->
+            </RibbonTab>
+        </Ribbon>
+        <DockPanel HorizontalAlignment="Center" LastChildFill="True" Grid.Row="1" Margin="0,0,0,0">
+            <Frame x:Name="_mainFrame" NavigationUIVisibility="Hidden" />
+        </DockPanel>
+    </Grid>
+</Window>
